@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46ACFBE31756E795006DD0E9 /* MWRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 46ACFBE21756E795006DD0E9 /* MWRegion.m */; };
 		46FF32E81755A57B003CAC39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF32E71755A57B003CAC39 /* Foundation.framework */; };
 		46FF32ED1755A57B003CAC39 /* MWGeoFencingManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46FF32EC1755A57B003CAC39 /* MWGeoFencingManager.h */; };
 		46FF32EF1755A57B003CAC39 /* MWGeoFencingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF32EE1755A57B003CAC39 /* MWGeoFencingManager.m */; };
@@ -27,8 +26,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		46ACFBE11756E795006DD0E9 /* MWRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWRegion.h; sourceTree = "<group>"; };
-		46ACFBE21756E795006DD0E9 /* MWRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWRegion.m; sourceTree = "<group>"; };
 		46FF32E41755A57B003CAC39 /* libMWGeoFencing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMWGeoFencing.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FF32E71755A57B003CAC39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		46FF32EB1755A57B003CAC39 /* MWGeoFencing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWGeoFencing-Prefix.pch"; sourceTree = "<group>"; };
@@ -79,8 +76,6 @@
 				46FF32EC1755A57B003CAC39 /* MWGeoFencingManager.h */,
 				46FF32EE1755A57B003CAC39 /* MWGeoFencingManager.m */,
 				46FF32EA1755A57B003CAC39 /* Supporting Files */,
-				46ACFBE11756E795006DD0E9 /* MWRegion.h */,
-				46ACFBE21756E795006DD0E9 /* MWRegion.m */,
 			);
 			path = MWGeoFencing;
 			sourceTree = "<group>";
@@ -145,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46FF32EF1755A57B003CAC39 /* MWGeoFencingManager.m in Sources */,
-				46ACFBE31756E795006DD0E9 /* MWRegion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

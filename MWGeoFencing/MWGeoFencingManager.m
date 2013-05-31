@@ -7,7 +7,6 @@
 //
 
 #import "MWGeoFencingManager.h"
-#import "MWRegion.h"
 
 @interface MWGeoFencingManager ()<CLLocationManagerDelegate>
 
@@ -44,25 +43,28 @@ static id sharedInstance;
 }
 
 #pragma mark - Public 
-+(void)startMonitoringForRegion:(MWRegion *)region {
++(void)startMonitoringForRegion:(CLRegion *)region {
     [[MWGeoFencingManager sharedInstance].manager startMonitoringForRegion:region];
 }
 
-+(void)stopMonitoringForRegion:(MWRegion *)region {
++(void)stopMonitoringForRegion:(CLRegion *)region {
     [[MWGeoFencingManager sharedInstance].manager stopMonitoringForRegion:region];
 }
 
 #pragma mark - CCLocationManagerDelegate
 - (void)locationController:(CLLocationManager *)controller didEnterRegion:(CLRegion *)region {
-    //[self.delegate locationController:self didEnterRegion:region];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDidEnterRegion object:region];
 }
 
 -(void)locationController:(CLLocationManager *)controller didExitRegion:(CLRegion *)region {
-    //[self.delegate locationController:self didExitRegion:region ];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDidExitRegion object:region];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
-    //[self.delegate locationController:self didStartMonitoringForRegion:region];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDidStartMonitoringRegion object:region];
 }
 
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationMonitoringDidFailForRegion object:region userInfo:@{@"error": error}];
+}
 @end
