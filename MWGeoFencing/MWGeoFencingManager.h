@@ -34,13 +34,13 @@
  
  @param region Object with the info for a region
  */
-- (void)startMonitoringForRegion:(CLRegion *)region;
++ (void)startMonitoringForRegion:(CLRegion *)region;
 
 /** Ends monitoring a given region.
  
  @param region Object with the info for a region
  */
-- (void)stopMonitoringForRegion:(CLRegion *)region;
++ (void)stopMonitoringForRegion:(CLRegion *)region;
 
 // clue for improper use (produces compile time error)
 +(instancetype) alloc __attribute__((unavailable("alloc not available, call sharedInstance instead")));
